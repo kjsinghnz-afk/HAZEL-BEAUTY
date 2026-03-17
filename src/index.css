@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Jost", sans-serif;
+  
+  --color-hazel-green: #2D4A3E;
+  --color-hazel-cream: #F9F6F0;
+  --color-hazel-gold: #C8A97E;
+  --color-hazel-dark: #1A1A1A;
+}
+
+@layer base {
+  body {
+    @apply bg-hazel-cream text-hazel-dark font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.glass-nav {
+  @apply bg-hazel-cream/80 backdrop-blur-md border-b border-hazel-green/10;
+}
+
+.btn-primary {
+  @apply bg-hazel-green text-hazel-cream px-8 py-3 rounded-none hover:bg-hazel-green/90 transition-all duration-300 font-medium uppercase tracking-widest text-sm;
+}
+
+.btn-outline {
+  @apply border border-hazel-green text-hazel-green px-8 py-3 rounded-none hover:bg-hazel-green hover:text-hazel-cream transition-all duration-300 font-medium uppercase tracking-widest text-sm;
+}
+
+.section-padding {
+  @apply py-20 px-6 md:px-12 lg:px-24;
+}
